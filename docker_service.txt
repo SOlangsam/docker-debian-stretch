@@ -1,0 +1,5 @@
+  Stop-Service docker
+  dockerd --unregister-service
+to remove the docker service. Then re-register docker service using
+  dockerd --exec-opt isolation=process --max-concurrent-downloads 1 --register-service
+  Start-Service docker
